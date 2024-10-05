@@ -1,5 +1,12 @@
 ## Machine Learning Sensor Fault Project
 
+## Table of Contents
+- [Problem Statement](#problem-statement)
+- [ Details](#details)
+- [Output (Target)](#Output-Target)
+- [Goal](#Goal)
+- [Machine Learning Task](#Machine-Learning-Task)
+
 # Problem Statement :
 Objective: Develop a machine learning model to predict the quality of semiconductor wafers as either "Good" or "Bad" based on sensor readings collected during the fabrication process.
 
