@@ -10,7 +10,7 @@
 - [Real-Time Prediction](#Real-Time-Prediction)
 - [Feedback and Continuous Improvement](#Feedback-and-Continuous-Improvement)
 - [Technologies Used](#Technologies-Used)
-- [Contributing](#Contributing)
+- [Contribution](#Contributing)
 
 
 
