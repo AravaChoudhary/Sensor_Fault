@@ -3,7 +3,12 @@
 ## Table of Contents
 - [Introduction](#Introduction)
 - [Problem Statement](#problem-statement)
-- [ Details](#details)
+- [Machine Learning Workflow](#Machine-Learning-Workflow)
+- [Model Deployment](#Model-Deployment)
+- [Real-Time Prediction](#Real-Time-Prediction)
+- [Feedback and Continuous Improvement](#Feedback-and-Continuous-Improvement)
+- [Technologies Used](#Technologies-Used)
+- [Contributing](#Contributing)
 - [Output (Target)](#Output-Target)
 - [Goal](#Goal)
 - [Machine Learning Task](#Machine-Learning-Task)
