@@ -5,13 +5,13 @@
 - [Problem Statement](#problem-statement)
 - [Machine Learning Workflow](#Machine-Learning-Workflow)
 - [Model Deployment](#Model-Deployment)
+- [Output (Target)](#Output-Target)
+- [Machine Learning Task](#Machine-Learning-Task)
 - [Real-Time Prediction](#Real-Time-Prediction)
 - [Feedback and Continuous Improvement](#Feedback-and-Continuous-Improvement)
 - [Technologies Used](#Technologies-Used)
 - [Contributing](#Contributing)
-- [Output (Target)](#Output-Target)
-- [Goal](#Goal)
-- [Machine Learning Task](#Machine-Learning-Task)
+
 
 
 # Introduction
@@ -53,6 +53,13 @@ The objective is to develop a binary classification model that can predict the q
 
 Once the model has been trained and validated, it can be deployed into the production environment where real-time data will be fed into it for prediction.
 
+# Output (Target):
+The target variable is labeled as "Good/Bad," where 1 indicates a "Good" wafer, and -1 indicates a "Bad" wafer.
+
+# Machine Learning Task:
+Type: Supervised Learning (Classification)
+Model Type: Binary Classification Model
+
 # Real-Time Prediction
 
 	•	Sensor Integration: Collect real-time data from sensors installed at various stages of wafer fabrication.
@@ -71,10 +78,9 @@ Once the model has been trained and validated, it can be deployed into the produ
 # Technologies Used
 
 	•	Languages: Python
-	•	Libraries: Scikit-learn, Pandas, NumPy
-	•	Tools: Jupyter Notebook, Streamlit (for UI), GitHub, Docker (for containerization)
+	•	Libraries: Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly
+	•	Tools: Google Colaboratory, GitHub, Docker (for containerization)
 	•	Cloud/Database: Cloud-based or on-premise solutions for real-time data storage and processing
-
 
 # Contributing
 
@@ -83,8 +89,6 @@ Feel free to submit issues or pull requests if you’d like to contribute to the
 # Output (Target):
 The target variable is labeled as "Good/Bad," where 1 indicates a "Good" wafer, and -1 indicates a "Bad" wafer.
 
-# Goal:
-The goal is t o build a classification model that can accurately predict whether a wafer is good o r bad based on the sensor readings. This prediction can help in early detection of defective wafers, improving yield and reducing waste in t h e semiconductor manufacturing process.
 
 # Machine Learning Task:
 Type: Supervised Learning (Classification)
