@@ -10,7 +10,7 @@
 - [Real-Time Prediction](#Real-Time-Prediction)
 - [Feedback and Continuous Improvement](#Feedback-and-Continuous-Improvement)
 - [Technologies Used](#Technologies-Used)
-- [Contribution](#Contributing)
+- [Contribution](#Contribution)
 
 
 
@@ -84,10 +84,3 @@ Model Type: Binary Classification Model
 
 # Contribution
 Feel free to submit issues or pull requests if you’d like to contribute to the project. Contributions are always welcome!
-
-# Output (Target):
-The target variable is labeled as "Good/Bad," where 1 indicates a "Good" wafer, and -1 indicates a "Bad" wafer.
-
-# Machine Learning Task:
-Type: Supervised Learning (Classification)
-Model Type: Binary Classification Model
