@@ -9,3 +9,5 @@ MONGO_DB_URL = "mongodb+srv://Aranika:Nainika1234$@cluster0.d2qw0.mongodb.net/?r
 
 MODEL_FILE_NAME = "model"
 MODEL_FILE_EXTENSION = ".pkl"
+
+artifact_folder = 'artifacts'
