@@ -4,11 +4,12 @@ import numpy as np
 import pandas as pd
 from pymongo import MongoClient
 from zipfile import Path
+from dataclasses import dataclass
+
 from src.constant import *
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import main_utils
-from dataclasses import dataclass
+from src.utils.main_utils import MainUtils
 
 
 @dataclass
@@ -19,7 +20,7 @@ class DataIngestionConfig:
 class DataIngestion:
     def __init__(self):
         self.data_ingestion_config = DataIngestionConfig()
-        self.utils = main_utils()
+        self.utils = MainUtils()
 
     def export_collection_as_dataframe(self,collection_name,db_name):
         
