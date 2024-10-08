@@ -34,20 +34,20 @@ The objective is to develop a binary classification model that can predict the q
 
 # Machine Learning Workflow
 
-1. Data Preprocessing
+	1. Data Preprocessing
 
-	•	Data Cleaning: Handle missing values and remove noise.
-	•	Feature Engineering: Extract and select relevant features from sensor data to enhance model performance.
-	•	Train-Test Split: Divide the data into training and testing sets.
+		•	Data Cleaning: Handle missing values and remove noise.
+		•	Feature Engineering: Extract and select relevant features from sensor data to enhance model 		performance.
+		•	Train-Test Split: Divide the data into training and testing sets.
 
-2. Model Development
+	2. Model Development
 
-	•	Algorithm Selection:
-	•	Logistic Regression: For a simple and interpretable model.
-	•	Random Forest & Gradient Boosting: To handle complex interactions between features.
-	•	Neural Networks: To capture intricate patterns in larger datasets.
-	•	Model Training: Use cross-validation to ensure model generalization.
-	•	Hyperparameter Tuning: Optimize model parameters for better accuracy, precision, and recall.
+		•	Algorithm Selection:
+		•	Logistic Regression: For a simple and interpretable model.
+		•	Random Forest & Gradient Boosting: To handle complex interactions between features.
+		•	Neural Networks: To capture intricate patterns in larger datasets.
+		•	Model Training: Use cross-validation to ensure model generalization.
+		•	Hyperparameter Tuning: Optimize model parameters for better accuracy, precision, and recall.
 
 # Model Deployment
 
