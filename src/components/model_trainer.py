@@ -34,7 +34,7 @@ class ModelTrainer:
         self.models = {
             'XGBClassifier' : XGBClassifier(),
             'GradientBoostingClassifier' : GradientBoostingClassifier(),
-            'SVC' : SVC,
+            'SVC' : SVC(),
             'RandomForestClassifier' : RandomForestClassifier()
         }
 
@@ -56,7 +56,7 @@ class ModelTrainer:
                     train_accuracy = accuracy_score(y_train, y_train_pred)
                     test_accuracy = accuracy_score(y_test, y_test_pred)
 
-                    report[list(model.keys())[i]] = test_accuracy
+                    report[list(models.keys())[i]] = test_accuracy
 
                 return report
 
@@ -118,24 +118,22 @@ class ModelTrainer:
             raise CustomException(e,sys)
         
     
-    def initiate_model_trainer(self , train_array , test_array):
-
+    def initiate_model_trainer(self, train_array, test_array):
         try:
-
             logging.info(f"Splitting Training and Testing Input and Target features")
 
-            x_train , y_train , x_test , y_test ={
-                train_array[:,:-1],
-                train_array[:,-1],
-                test_array[:,:-1],
-                test_array[:,-1],
-            }
+            x_train, y_train, x_test, y_test = (
+                train_array[:, :-1],
+                train_array[:, -1],
+                test_array[:, :-1],
+                test_array[:, -1],
+            )
 
             logging.info(f"Extracting the Model config file path")
 
-            model_report: dict = self.evaluate_models(X = x_train , y = y_train , models = self.models)
+            model_report: dict = self.evaluate_models(X=x_train, y=y_train, models=self.models)
 
-            # best model score from dict
+            # Getting best model score from dict
             best_model_score = max(sorted(model_report.values()))
 
             # Getting Best Model name from report
@@ -144,37 +142,44 @@ class ModelTrainer:
             ]
 
             best_model = self.models[best_model_name]
-            
+
             best_model = self.finetune_best_model(
-                best_model_name = best_model_name,
-                best_model_object = best_model,
-                X_train = x_train,
-                y_train = y_train
+                best_model_name=best_model_name,
+                best_model_object=best_model,
+                X_train=x_train,
+                y_train=y_train
             )
 
-            best_model.fit(x_train , y_train)
+            best_model.fit(x_train, y_train)
             y_pred = best_model.predict(x_test)
-            best_model_score = accuracy_score(x_test,y_pred)
 
-            print(f'Best Model Name : {best_model_name} and Score : {best_model_score}')
+            # Debugging output
+            print("y_test unique values:", np.unique(y_test))
+            print("y_pred unique values:", np.unique(y_pred))
+
+            # If y_pred is not in binary form, apply a threshold if needed
+            if np.issubdtype(y_pred.dtype, np.number):  # Check if y_pred is continuous
+                threshold = 0.5
+                y_pred = (y_pred >= threshold).astype(int)
+
+            best_model_score = accuracy_score(y_test, y_pred)
+
+            print(f'Best Model Name: {best_model_name} and Score: {best_model_score}')
 
             if best_model_score < 0.50:
                 raise Exception(f'No best model found with Accuracy greater than the Threshold 0.6')
-            
+
             logging.info(f"Best Model Found on both training and testing data")
+            logging.info(f"Saving model at path: {self.model_trainer_config.trained_model_path}")
 
-            logging.info(f"Saving model at path : {self.model_trainer_config.trained_model_path}")
-
-            os.makedirs(os.path.dirname(self.model_trainer_config.trained_model_path , exist_ok = True))
+            os.makedirs(os.path.dirname(self.model_trainer_config.trained_model_path), exist_ok=True)
 
             self.utils.save_object(
-                file_path = self.model_trainer_config.trained_model_path,
-                obj = best_model
+                file_path=self.model_trainer_config.trained_model_path,
+                obj=best_model
             )
 
             return self.model_trainer_config.trained_model_path
 
         except Exception as e:
-            raise CustomException(e,sys)
-         
-
+            raise CustomException(e, sys)
