@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sensor Fault Detection Project</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS for responsive layout and styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for additional styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+        }
+
+        .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+            font-size: 3rem;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Styling for sections */
+        .section {
+            background-color: #FFFFFF;
+            border-left: 6px solid #007bff; /* Blue accent */
+            border-radius: 8px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-10px); /* Elevate on hover */
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15); /* Add a slightly larger shadow */
+            background-color: #f7f7f7; /* Change background color on hover for contrast */
+        }
+
+        .btn-try {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            font-size: 1.2rem;
+            background-color: #2196F3; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-try:hover {
+            background-color: #1976D2; /* Darker blue on hover */
+        }
+
+        .btn-try:active {
+            background-color: #0D47A1; /* Darkest blue when clicked */
+        }
+
+.tech-icons img {
+            width: 80px; /* Increased size for better visibility */
+            height: 80px; /* Ensure square aspect ratio */
+            margin: 10px;
+            object-fit: contain; /* Ensure logos maintain their aspect ratio */
+        }
+
+        tech-icons img {
+            width: 80px; /* Increased size for better visibility */
+            height: 80px; /* Ensure square aspect ratio */
+            margin: 10px;
+            object-fit: contain; /* Ensure logos maintain their aspect ratio */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sensor Fault Detection Project</h1>
+        <a href="/train" class="btn-try">Try the Model</a>
+
+        <div class="section">
+            <h3>Introduction</h3>
+            <p>
+                In semiconductor manufacturing, wafers serve as the foundation for integrated circuits and solar cells. The fabrication of these wafers is highly complex, involving multiple steps and numerous sensor readings to ensure quality. The Sensor Fault Detection Project aims to build a machine learning model to classify wafers as “Good” or “Bad” based on sensor data, helping identify faulty wafers in real-time, reducing production waste, and improving yield.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Problem Statement</h3>
+            <p>
+                The objective is to develop a binary classification model that can predict the quality of semiconductor wafers using 590 sensor readings collected during their fabrication process. Each wafer is labeled as either “Good” (1) or “Bad” (-1), and the model’s goal is to accurately classify wafers into these two categories based on sensor data.
+            </p>
+            <p><strong>Inputs (Features):</strong> The dataset consists of 590 sensor readings for each wafer, capturing various environmental and process parameters.</p>
+            <p><strong>Output (Target):</strong> The target variable is labeled as "Good/Bad" where 1 indicates "Good" and -1 indicates "Bad".</p>
+        </div>
+
+        <div class="section">
+            <h3>Instructions : How to use the Model</h3>
+            <p>
+                Welcome to the Sensor Fault Detection Project! This project aims to develop a machine learning model that classifies semiconductor wafers as either "Good" or "Bad" based on sensor readings. To successfully navigate through this project, please follow these instructions:
+            </p>
+            <ul>
+                <li><strong>Data Collection:</strong> Ensure that you have access to the dataset, which contains sensor readings for the wafers. This dataset is crucial for training and testing the machine learning model.</li>
+                <li><strong>Data Preprocessing:</strong> Clean and preprocess the data. Handle missing values, normalize the sensor readings, and split the data into training and testing sets.</li>
+                <li><strong>Model Development:</strong> Use appropriate machine learning algorithms to train the model. Common choices include decision trees, random forests, or gradient boosting methods like XGBoost.</li>
+                <li><strong>Model Evaluation:</strong> Assess the model's performance using metrics such as accuracy, precision, recall, and F1-score. Validate the model using the test dataset.</li>
+                <li><strong>Real-Time Integration:</strong> After achieving satisfactory performance, integrate the model with real-time sensor data for online predictions during the wafer production process.</li>
+                <li><strong>Feedback Loop:</strong> Continuously monitor the model's performance and update it with new data to maintain accuracy over time.</li>
+            </ul>
+            <p>
+                Following these steps will help ensure a successful implementation of the Sensor Fault Detection model. If you have any questions or need assistance, feel free to reach out!
+            </p>
+            <a href="/train" class="btn-try">Try the Model</a>
+        </div>
+
+        <div class="section">
+            <h3>Technologies Used</h3>
+            <p>
+                This project utilizes the following technologies:
+            </p>
+            <div class="tech-icons">
+                <img src="https://www.python.org/community/logos/python-logo-generic.svg" alt="Python Logo">
+                <img src="https://raw.githubusercontent.com/scikit-learn/scikit-learn/main/doc/logos/scikit-learn-logo-small.png" alt="Scikit-learn Logo">
+                <img src="https://pandas.pydata.org/pandas-docs/stable/_static/pandas_logo.png" alt="Pandas Logo">
+                <img src="https://numpy.org/images/logo.svg" alt="NumPy Logo">
+                <img src="https://matplotlib.org/stable/_images/sphx_glr_logo2_001.png" alt="Matplotlib Logo">
+                <img src="https://seaborn.pydata.org/_images/seaborn-logo.svg" alt="Seaborn Logo">
+                <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker Logo">
+                <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab Logo">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sensor Fault Detection Project. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

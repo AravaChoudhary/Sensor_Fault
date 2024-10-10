@@ -1,48 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Wafer fault detection</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="../static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sensor Fault Detection Project</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+        }
 
+        .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
 
+        h1, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .frame {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e8eaf6;
+            border-radius: 8px;
+            border: 1px solid #c5cae9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .dropzone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f0f0f5;
+            border: 2px dashed #007bff;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        
+
+        .upload-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .btn-try {
+            display: inline-block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            font-size: 1.2rem;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-try:hover {
+            background-color: #1976D2;
+        }
+
+        .btn-try:active {
+            background-color: #0D47A1;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-   
-<!-- partial:index.partial.html -->
-<form action = "/predict" method = "post" enctype="multipart/form-data" >
-    <h1 class="title">Upload CSV for the prediction</h1>
-<div class="frame">
-    <div class="center">
-        <div class="title">
-            <h1>Drop file to upload</h1>
-        </div>
-       
-
-
-            <div class="dropzone">
-                <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-                <input type="file" class="upload-input" name = "file" accept=".csv" >
+    <div class="container">
+        <h3>Upload CSV for the prediction</h3>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <div class="frame">
+                <div class="center">
+                    <h4>Drop file to upload</h4>
+                    <div class="dropzone">
+                        <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                        <input type="file" class="upload-input" name = "file" accept=".csv" >
+                    </div>
+                    <button type="submit" class="btn-try" name="uploadbutton">Upload file</button>
+                </div>
             </div>
-
-
-        <button type="submit" class="btn" name="uploadbutton">Upload file</button>
-       
+        </form>
     </div>
-
-
-</div>
-
-
-</form>
-<!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
-
-
-<!-- NO JS ADDED YET -->
-<!-- partial -->
-  <script src='https://100dayscss.com/codepen/js/jquery.min.js'></script><script  src="./script.js"></script>
-
-
 </body>
+
 </html>

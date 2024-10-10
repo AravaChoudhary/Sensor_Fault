@@ -12,8 +12,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Welcome to my application"
-
+    return render_template('home.html')
 
 @app.route("/train")
 def train_route():
@@ -23,7 +22,7 @@ def train_route():
         train_pipeline.run_pipeline()
 
 
-        return "Training Completed."
+        return render_template('trained_model.html')
 
     except Exception as e:
         raise CustomException(e,sys)
