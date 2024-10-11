@@ -51,7 +51,7 @@ The objective is to develop a binary classification model that can predict the q
 
 # Model Deployment
 
-Once the model has been trained and validated, it can be deployed into the production environment where real-time data will be fed into it for prediction.
+Once the model has been trained and validated, it can be deployed into the production environment where real-time data will be fed into it for prediction. and used AWS for this .
 
 # Output (Target):
 The target variable is labeled as "Good/Bad," where 1 indicates a "Good" wafer, and -1 indicates a "Bad" wafer.
