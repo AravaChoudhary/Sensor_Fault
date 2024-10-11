@@ -49,12 +49,12 @@ The objective is to develop a binary classification model that can predict the q
 	- Logistic Regression**: Used for its simplicity and interpretability.
 	- Random Forest Classifier**: To capture complex interactions between features.
 	- Gradient Boosting Classifier**: For handling non-linear relationships effectively.
-	- XGBoost Classifier**: A powerful boosting algorithm widely used in industry.
+	- XGBoost Classifier: A powerful boosting algorithm widely used in industry.
 
-	- Model Training**:  
+	- Model Training:  
 		Cross-validation was used to train the models on the training set and validate their performance.
 
-	- Hyperparameter Tuning**:  
+	- Hyperparameter Tuning:  
 		Hyperparameter tuning was performed using `GridSearchCV` to optimize model parameters for better accuracy, precision, and recall.
 
 
@@ -79,9 +79,9 @@ Model Type: Binary Classification Model
 
 # Feedback and Continuous Improvement
 
-	•	Performance Monitoring: Continuously monitor model performance and compare predictions with actual outcomes to detect any drifts in accuracy.
-	•	Model Retraining: Periodically retrain the model using new data to adapt to changes in the fabrication process or sensor behavior.
-	•	Anomaly Detection: Implement anomaly detection to identify sensor faults or process anomalies, further improving production efficiency.
+	Performance Monitoring: Continuously monitor model performance and compare predictions with actual outcomes to detect any drifts in accuracy.
+	Model Retraining: Periodically retrain the model using new data to adapt to changes in the fabrication process or sensor behavior.
+	Anomaly Detection: Implement anomaly detection to identify sensor faults or process anomalies, further improving production efficiency.
 
 #  Docker & AWS
 
