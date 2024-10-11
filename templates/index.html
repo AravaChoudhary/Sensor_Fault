@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sensor Fault Detection Project</title>
+    <title>Wafer Fault Detection</title>
+
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS for responsive layout and styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom CSS for additional styling -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="../static/css/style.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -23,85 +25,135 @@
             padding-bottom: 50px;
         }
 
-        h1, h3 {
+        h1.title {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             font-weight: 700;
+            font-size: 2.5rem;
             color: #007bff;
         }
 
-        .frame {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #e8eaf6;
+        .section {
+            background-color: #FFFFFF;
+            border-left: 6px solid #007bff;
             border-radius: 8px;
-            border: 1px solid #c5cae9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+            background-color: #f7f7f7; /* Change background color on hover for contrast */
         }
 
         .dropzone {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            background-color: #f0f0f5;
-            border: 2px dashed #007bff;
+            border: 2px dashed #007bff; /* Dashed border */
             border-radius: 8px;
-            cursor: pointer;
-        }
-        
-        
-
-        .upload-icon {
-            width: 50px;
-            height: 50px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            transition: background-color 0.3s;
         }
 
-        .btn-try {
-            display: inline-block;
+        .dropzone:hover {
+            background-color: #e9f7fe; /* Light blue on hover */
+        }
+
+        .btn {
+            display: block;
             width: 200px;
             margin: 20px auto;
             padding: 15px;
             font-size: 1.2rem;
-            background-color: #2196F3;
+            background-color: #007bff; /* Blue button */
             color: white;
-            border: none;
+            border: 2px solid transparent; /* Add transparent border */
             border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Add border color transition */
         }
 
-        .btn-try:hover {
-            background-color: #1976D2;
+        .btn:hover {
+            background-color: rgba(0, 123, 255, 0.8); /* Slightly transparent blue on hover */
+            border-color: #0056b3; /* Darker blue border on hover */
         }
 
-        .btn-try:active {
-            background-color: #0D47A1;
-        }
-
-        .center {
+        .download-section {
             text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            background-color: #28a745; /* Green button for download */
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #555;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h3>Upload CSV for the prediction</h3>
+        <h1 class="title">Upload CSV for Prediction</h1>
         <form action="/predict" method="post" enctype="multipart/form-data">
-            <div class="frame">
-                <div class="center">
-                    <h4>Drop file to upload</h4>
-                    <div class="dropzone">
-                        <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-                        <input type="file" class="upload-input" name = "file" accept=".csv" >
-                    </div>
-                    <button type="submit" class="btn-try" name="uploadbutton">Upload file</button>
+            <div class="section">
+                <h1>Drop file to upload</h1>
+                <div class="dropzone">
+                    <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                    <input type="file" class="upload-input" name="file" accept=".csv">
                 </div>
+                <button type="submit" class="btn" name="uploadbutton">Upload file</button>
             </div>
         </form>
-    </div>
-</body>
 
+        <div class="section download-section">
+            <h3>Download Prediction Template</h3>
+            <p>Click the button below to download the file. You can then upload this file to make predictions:</p>
+            <a href="/download-prediction-file" class="btn download-btn">Download Prediction File</a>
+        </div>
+
+        <div class="section">
+            <h3>Instructions : How to use the Model</h3>
+            <p>
+                Welcome to the Sensor Fault Detection Project! This project aims to develop a machine learning model that classifies semiconductor wafers as either "Good" or "Bad" based on sensor readings. To successfully navigate through this project, please follow these instructions:
+                <br>
+                <li><strong>Steps:</strong>These are the steps to use this model</li>
+            </p>
+            <ul>
+                <li><strong>Upload the file:</strong> You can upload the file by clicking on the hoose file button.</li>
+                <br>
+                <li><strong>Upload button:</strong> By pressing the Upload button the file will be uploaded.</li>
+                <br>
+                <li><strong>Predictions:</strong>After uploading the file the Machine learning model has succesfully ran and your predictions are made.</li>
+                <br>
+                <li><strong>Predicted file:</strong>Now you can download the predictions as a CSV file.</li>
+            </ul>
+            <p>
+                These steps will help ensure a successful implementation of the Sensor Fault Detection model. If you have any questions or need assistance, feel free to reach out!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sensor Fault Detection. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

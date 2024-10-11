@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trained Model - Sensor Fault Detection</title>
+
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap CSS for responsive layout and styling -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Custom CSS for additional styling -->
     <style>
         body {
@@ -60,13 +63,14 @@
             font-size: 1.2rem;
             background-color: #007bff; /* Blue button */
             color: white;
-            border: none;
+            border: 2px solid transparent; /* Add transparent border */
             border-radius: 30px;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Add border color transition */
         }
 
         .btn-next:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: rgba(0, 123, 255, 0.8); /* Slightly transparent blue on hover */
+            border-color: #0056b3; /* Darker blue border on hover */
         }
 
         footer {
@@ -81,26 +85,38 @@
 <body>
     <div class="container">
         <h1>Model Trained & Ready for Prediction</h1>
-        <a href="/predict" class="btn-next">Make Predictions</a>
-
+    
         <div class="section">
-            <p>
-                The machine learning model for sensor fault detection has been successfully trained and is now ready for making predictions.
-                You can use this model to predict the quality of semiconductor wafers based on sensor readings.
-            </p>
-            <p>
-                The model was trained on 590 sensor features per wafer, capturing various environmental and process parameters.
-                It has achieved a high level of accuracy and is now prepared to assist in improving production efficiency.
-            </p>
+            <ul>
+                <li>
+                    The machine learning model for sensor fault detection has been successfully trained and is now ready for making predictions.
+                    You can use this model to predict the quality of semiconductor wafers based on sensor readings.
+                </li>
+                <br>
+                <li>
+                    The model was trained on <strong>590 sensor features per wafer</strong>, capturing various environmental and process parameters.
+                    It has achieved a high level of accuracy and is now prepared to assist in improving production efficiency.
+                </li>
+            </ul>
         </div>
-
-        <!-- Button linking to index.html for predictions -->
+    
+        <!-- Button linking to /predict for predictions -->
         <a href="/predict" class="btn-next">Make Predictions</a>
     </div>
 
+
+    <!-- Diagrams Section -->
+    <div class="section">
+        <h2>Project Flow of Model Training and Model Evaluation</h2>
+        <div class="diagram">
+            <img src="{{ url_for('static', filename='High_Level_Flow.png') }}" alt="Diagram 1 Description">
+            <p> Overview of the Sensor Fault Detection Workflow</p>
+        </div>
+    </div>
+    
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Sensor Fault Detection Project. All rights reserved.</p>
+        <p>&copy; 2024 Sensor Fault Detection. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
@@ -109,13 +125,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-

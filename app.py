@@ -1,6 +1,6 @@
 import os,sys
 from src.logger import logging as lg
-from flask import Flask, render_template, jsonify, request, send_file
+from flask import Flask, render_template, jsonify, request, send_file , send_from_directory
 
 from src.exception import CustomException
 from src.pipeline.train_pipeline import TrainingPipeline
@@ -13,6 +13,13 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template('home.html')
+
+@app.route('/download-prediction-file')
+def download_prediction_file():
+    file_name = 'test.csv'
+    directory = os.path.join(app.root_path, 'prediction_artifact')
+    return send_from_directory(directory, file_name, as_attachment=True)
+
 
 @app.route("/train")
 def train_route():

@@ -74,11 +74,11 @@
             background-color: #0D47A1; /* Darkest blue when clicked */
         }
 
-.tech-icons img {
-            width: 80px; /* Increased size for better visibility */
-            height: 80px; /* Ensure square aspect ratio */
-            margin: 10px;
-            object-fit: contain; /* Ensure logos maintain their aspect ratio */
+        .tech-icons img {
+                    width: 80px; /* Increased size for better visibility */
+                    height: 80px; /* Ensure square aspect ratio */
+                    margin: 10px;
+                    object-fit: contain; /* Ensure logos maintain their aspect ratio */
         }
 
         tech-icons img {
@@ -100,7 +100,7 @@
 <body>
     <div class="container">
         <h1>Sensor Fault Detection Project</h1>
-        <a href="/train" class="btn-try">Try the Model</a>
+        <a href="/train" class="btn-try">Try the Model 📝</a>
 
         <div class="section">
             <h3>Introduction</h3>
@@ -119,7 +119,26 @@
         </div>
 
         <div class="section">
-            <h3>Instructions : How to use the Model</h3>
+            <h3>Technologies Used</h3>
+            <p>
+                This project utilizes the following technologies:
+            </p>
+            <div class="tech-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width: 100px; height: auto;">
+                <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn Logo" style="width: 100px; height: auto;">
+                <img src="{{ url_for('static', filename='pandas.jpg.webp') }}" alt="Pandas Logo" style="width: 100px; height: auto;">
+                <img src="https://numpy.org/images/logo.svg" alt="NumPy Logo" style="width: 100px; height: auto;">
+                <img src="{{ url_for('static', filename='matplotlib.jpg') }}" alt="Matplotlib Logo" style="width: 100px; height: auto;">
+                <img src="{{ url_for('static', filename='seaborn.jpg') }}" alt="Seaborn Logo" style="width: 100px; height: auto;">
+                <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker Logo" style="width: 100px; height: auto;">
+                <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab Logo" style="width: 100px; height: auto;">
+                <img src="{{ url_for('static', filename='aws.jpg') }}" alt="AWS Logo" style="width: 100px; height: auto;">
+                <img src="{{ url_for('static', filename='atlas.jpg') }}" alt="MongoDB Atlas Logo" style="width: 100px; height: auto;">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>About the ML Model</h3>
             <p>
                 Welcome to the Sensor Fault Detection Project! This project aims to develop a machine learning model that classifies semiconductor wafers as either "Good" or "Bad" based on sensor readings. To successfully navigate through this project, please follow these instructions:
             </p>
@@ -134,29 +153,12 @@
             <p>
                 Following these steps will help ensure a successful implementation of the Sensor Fault Detection model. If you have any questions or need assistance, feel free to reach out!
             </p>
-            <a href="/train" class="btn-try">Try the Model</a>
-        </div>
-
-        <div class="section">
-            <h3>Technologies Used</h3>
-            <p>
-                This project utilizes the following technologies:
-            </p>
-            <div class="tech-icons">
-                <img src="https://www.python.org/community/logos/python-logo-generic.svg" alt="Python Logo">
-                <img src="https://raw.githubusercontent.com/scikit-learn/scikit-learn/main/doc/logos/scikit-learn-logo-small.png" alt="Scikit-learn Logo">
-                <img src="https://pandas.pydata.org/pandas-docs/stable/_static/pandas_logo.png" alt="Pandas Logo">
-                <img src="https://numpy.org/images/logo.svg" alt="NumPy Logo">
-                <img src="https://matplotlib.org/stable/_images/sphx_glr_logo2_001.png" alt="Matplotlib Logo">
-                <img src="https://seaborn.pydata.org/_images/seaborn-logo.svg" alt="Seaborn Logo">
-                <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker Logo">
-                <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab Logo">
-            </div>
+            <a href="/train" class="btn-try">Try the Model 📝</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Sensor Fault Detection Project. All rights reserved.</p>
+        <p>&copy; 2024 Sensor Fault Detection. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
