@@ -66,31 +66,31 @@ Once the model has been trained and validated, it can be deployed into the produ
 The target variable is labeled as "Good/Bad," where 1 indicates a "Good" wafer, and -1 indicates a "Bad" wafer.
 
 # Machine Learning Task:
-Type: Supervised Learning (Classification)
-Model Type: Binary Classification Model
+	Type: Supervised Learning (Classification)
+	Model Type: Binary Classification Model
 
 # Real-Time Prediction
 
-•	Sensor Integration: Collect real-time data from sensors installed at various stages of wafer fabrication.
-•	Prediction Engine: The model continuously processes incoming sensor data to predict whether each wafer is likely to be good or bad.
-•	Actionable Insights:
-•	Flag faulty wafers for further inspection or removal.
-•	Trigger adjustments in the fabrication process based on prediction patterns to prevent future defects.
+	•	Sensor Integration: Collect real-time data from sensors installed at various stages of wafer fabrication.
+	•	Prediction Engine: The model continuously processes incoming sensor data to predict whether each wafer is likely to be good or bad.
+	•	Actionable Insights:
+	•	Flag faulty wafers for further inspection or removal.
+	•	Trigger adjustments in the fabrication process based on prediction patterns to prevent future defects.
 
 # Feedback and Continuous Improvement
 
-•	Performance Monitoring: Continuously monitor model performance and compare predictions with actual outcomes to detect any drifts in accuracy.
-•	Model Retraining: Periodically retrain the model using new data to adapt to changes in the fabrication process or sensor behavior.
-•	Anomaly Detection: Implement anomaly detection to identify sensor faults or process anomalies, further improving production efficiency.
+	•	Performance Monitoring: Continuously monitor model performance and compare predictions with actual outcomes to detect any drifts in accuracy.
+	•	Model Retraining: Periodically retrain the model using new data to adapt to changes in the fabrication process or sensor behavior.
+	•	Anomaly Detection: Implement anomaly detection to identify sensor faults or process anomalies, further improving production efficiency.
 
 #  Docker & AWS
 
 The project uses Docker for containerization and AWS for deployment
 
-AWS Services used:
-	EC2: For hosting the application.
-	S3: For storage.
-	AWS App Runner: To automate deployment.
+	AWS Services used:
+		EC2: For hosting the application.
+		S3: For storage.
+		AWS App Runner: To automate deployment.
 
 	The model was deployed on an EC2 instance, using S3 for data storage and AWS AppRunner for managing continuous integration and delivery. MongoDB Atlas was used for database management, handling sensor data storage and retrieval efficiently.
 
@@ -98,12 +98,12 @@ Continuous Integration/Continuous Delivery (CI/CD)
 
 	The CI/CD pipeline is configured using GitHub Actions to automate code testing and deployment:
 
-	Continuous Integration:
-	Linting the code.
-	Running unit tests.
+	Continuous Integration
+	Linting the code
+	Running unit tests
 	Continuous Delivery:
-	Build, tag, and push Docker image to Amazon ECR.
-	Deploy the Docker container on AWS using EC2.
+	Build, tag, and push Docker image to Amazon ECR
+	Deploy the Docker container on AWS using EC2
 
 
 # Technologies Used
