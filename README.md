@@ -8,6 +8,7 @@
 - [Output (Target)](#Output-Target)
 - [Machine Learning Task](#Machine-Learning-Task)
 - [Real-Time Prediction](#Real-Time-Prediction)
+- [Docker & AWS](#docker-AWS)
 - [Feedback and Continuous Improvement](#Feedback-and-Continuous-Improvement)
 - [Technologies Used](#Technologies-Used)
 - [Contribution](#Contribution)
@@ -74,13 +75,34 @@ Model Type: Binary Classification Model
 	•	Model Retraining: Periodically retrain the model using new data to adapt to changes in the fabrication process or sensor behavior.
 	•	Anomaly Detection: Implement anomaly detection to identify sensor faults or process anomalies, further improving production efficiency.
 
+#  Docker & AWS
+
+The project uses Docker for containerization and AWS for deployment
+
+AWS Services used:
+	EC2: For hosting the application.
+	S3: For storage.
+	AWS App Runner: To automate deployment.
+
+	The model was deployed on an EC2 instance, using S3 for data storage and AWS AppRunner for managing continuous integration and delivery. MongoDB Atlas was used for database management, handling sensor data storage and retrieval efficiently.
+
+Continuous Integration/Continuous Delivery (CI/CD)
+	The CI/CD pipeline is configured using GitHub Actions to automate code testing and deployment:
+	Continuous Integration:
+	Linting the code.
+	Running unit tests.
+	Continuous Delivery:
+	Build, tag, and push Docker image to Amazon ECR.
+	Deploy the Docker container on AWS using EC2.
+
 
 # Technologies Used
 
 	•	Languages: Python
 	•	Libraries: Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly
 	•	Tools: Google Colaboratory, GitHub, Docker (for containerization)
-	•	Cloud/Database: Cloud-based or on-premise solutions for real-time data storage and processing
+	•	Cloud/Database: Amazon Web Services (EC2, S3, AppRunner)
+	•   DataBase: MongoDB Atlas 
 
 # Contribution
 Feel free to submit issues or pull requests if you’d like to contribute to the project. Contributions are always welcome!
