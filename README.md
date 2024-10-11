@@ -46,9 +46,9 @@ The objective is to develop a binary classification model that can predict the q
 	For the Sensor Fault Detection project, multiple machine learning algorithms were evaluated and fine-tuned for binary classification. Below are the details:
 
 	- Algorithm Selection:The following algorithms were evaluated based on the dataset:
-	- Logistic Regression**: Used for its simplicity and interpretability.
-	- Random Forest Classifier**: To capture complex interactions between features.
-	- Gradient Boosting Classifier**: For handling non-linear relationships effectively.
+	- Logistic Regression: Used for its simplicity and interpretability.
+	- Random Forest Classifier: To capture complex interactions between features.
+	- Gradient Boosting Classifier: For handling non-linear relationships effectively.
 	- XGBoost Classifier: A powerful boosting algorithm widely used in industry.
 
 	- Model Training:  
@@ -71,17 +71,17 @@ Model Type: Binary Classification Model
 
 # Real-Time Prediction
 
-	•	Sensor Integration: Collect real-time data from sensors installed at various stages of wafer fabrication.
-	•	Prediction Engine: The model continuously processes incoming sensor data to predict whether each wafer is likely to be good or bad.
-	•	Actionable Insights:
-	•	Flag faulty wafers for further inspection or removal.
-	•	Trigger adjustments in the fabrication process based on prediction patterns to prevent future defects.
+•	Sensor Integration: Collect real-time data from sensors installed at various stages of wafer fabrication.
+•	Prediction Engine: The model continuously processes incoming sensor data to predict whether each wafer is likely to be good or bad.
+•	Actionable Insights:
+•	Flag faulty wafers for further inspection or removal.
+•	Trigger adjustments in the fabrication process based on prediction patterns to prevent future defects.
 
 # Feedback and Continuous Improvement
 
-	Performance Monitoring: Continuously monitor model performance and compare predictions with actual outcomes to detect any drifts in accuracy.
-	Model Retraining: Periodically retrain the model using new data to adapt to changes in the fabrication process or sensor behavior.
-	Anomaly Detection: Implement anomaly detection to identify sensor faults or process anomalies, further improving production efficiency.
+•	Performance Monitoring: Continuously monitor model performance and compare predictions with actual outcomes to detect any drifts in accuracy.
+•	Model Retraining: Periodically retrain the model using new data to adapt to changes in the fabrication process or sensor behavior.
+•	Anomaly Detection: Implement anomaly detection to identify sensor faults or process anomalies, further improving production efficiency.
 
 #  Docker & AWS
 
