@@ -8,7 +8,7 @@
 - [Output (Target)](#Output-Target)
 - [Machine Learning Task](#Machine-Learning-Task)
 - [Real-Time Prediction](#Real-Time-Prediction)
-- [Docker & AWS](#Docker-&-AWS)
+- [Docker & AWS](#Docker-and-AWS)
 - [Feedback and Continuous Improvement](#Feedback-and-Continuous-Improvement)
 - [Technologies Used](#Technologies-Used)
 - [Contribution](#Contribution)
