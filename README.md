@@ -1,4 +1,4 @@
-## Machine Learning Sensor Fault Project
+# Machine Learning Sensor Fault Project
 
 ## Table of Contents
 - [Introduction](#Introduction)
@@ -8,7 +8,7 @@
 - [Output (Target)](#Output-Target)
 - [Machine Learning Task](#Machine-Learning-Task)
 - [Real-Time Prediction](#Real-Time-Prediction)
-- [Docker & AWS](#docker-AWS)
+- [Docker & AWS](#Docker-&-AWS)
 - [Feedback and Continuous Improvement](#Feedback-and-Continuous-Improvement)
 - [Technologies Used](#Technologies-Used)
 - [Contribution](#Contribution)
@@ -35,20 +35,28 @@ The objective is to develop a binary classification model that can predict the q
 
 # Machine Learning Workflow
 
-	1. Data Preprocessing
+## 1. Data Preprocessing
 
 		•	Data Cleaning: Handle missing values and remove noise.
 		•	Feature Engineering: Extract and select relevant features from sensor data to enhance model 		performance.
 		•	Train-Test Split: Divide the data into training and testing sets.
 
-	2. Model Development
+## Model Development
 
-		•	Algorithm Selection:
-		•	Logistic Regression: For a simple and interpretable model.
-		•	Random Forest & Gradient Boosting: To handle complex interactions between features.
-		•	Neural Networks: To capture intricate patterns in larger datasets.
-		•	Model Training: Use cross-validation to ensure model generalization.
-		•	Hyperparameter Tuning: Optimize model parameters for better accuracy, precision, and recall.
+	For the Sensor Fault Detection project, multiple machine learning algorithms were evaluated and fine-tuned for binary classification. Below are the details:
+
+	- Algorithm Selection:The following algorithms were evaluated based on the dataset:
+	- Logistic Regression**: Used for its simplicity and interpretability.
+	- Random Forest Classifier**: To capture complex interactions between features.
+	- Gradient Boosting Classifier**: For handling non-linear relationships effectively.
+	- XGBoost Classifier**: A powerful boosting algorithm widely used in industry.
+
+	- Model Training**:  
+		Cross-validation was used to train the models on the training set and validate their performance.
+
+	- Hyperparameter Tuning**:  
+		Hyperparameter tuning was performed using `GridSearchCV` to optimize model parameters for better accuracy, precision, and recall.
+
 
 # Model Deployment
 
@@ -87,7 +95,9 @@ AWS Services used:
 	The model was deployed on an EC2 instance, using S3 for data storage and AWS AppRunner for managing continuous integration and delivery. MongoDB Atlas was used for database management, handling sensor data storage and retrieval efficiently.
 
 Continuous Integration/Continuous Delivery (CI/CD)
+
 	The CI/CD pipeline is configured using GitHub Actions to automate code testing and deployment:
+
 	Continuous Integration:
 	Linting the code.
 	Running unit tests.
@@ -101,8 +111,8 @@ Continuous Integration/Continuous Delivery (CI/CD)
 	•	Languages: Python
 	•	Libraries: Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly
 	•	Tools: Google Colaboratory, GitHub, Docker (for containerization)
-	•	Cloud/Database: Amazon Web Services (EC2, S3, AppRunner)
-	•   DataBase: MongoDB Atlas 
+	•	Cloud: Amazon Web Services (EC2, S3, AppRunner)
+	•	DataBase: MongoDB Atlas
 
 # Contribution
 Feel free to submit issues or pull requests if you’d like to contribute to the project. Contributions are always welcome!
